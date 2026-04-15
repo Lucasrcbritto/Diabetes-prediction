@@ -1,0 +1,55 @@
+raw_diabetes_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/diabetes-dataset-modelling.csv
+
+raw_inference_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/diabetes-dataset-inference.csv
+
+cleaned_data:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/cleaned_data.parquet
+
+featured_data:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/featured_data.parquet
+
+X_train:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/X_train.parquet
+
+X_test:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/X_test.parquet
+
+y_train:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/y_train.csv
+
+y_test:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/y_test.csv
+
+trained_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/trained_model.pkl
+
+scaler:
+  type: pickle.PickleDataset
+  filepath: data/06_models/scaler.pkl
+
+inference_predictions:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/predictions.csv
+
+prepared_inference_data:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/prepared_inference_data.parquet
+
+cleaned_inference_data:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/cleaned_inference_data.parquet
+
+featured_inference_data:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/featured_inference_data.parquet
